@@ -22,6 +22,18 @@ import {fetchProductById, createCartItem} from '@/api/index'
 
 export default {
   
+  head : {
+    title : 'Shopping Item Detail',
+    meta : [
+      {
+        hid : 'description',
+        name : 'description',
+        content : '상품 상세 페이지 입니다.',
+      },
+    ],
+    link : [],
+  },
+
   async asyncData({params}){
     const res = await fetchProductById(params.id)
     const product = res.data
