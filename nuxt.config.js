@@ -47,7 +47,7 @@ export default {
   env : {
     baseURL : process.env.NODE_ENV === 'production' 
       ? 'https://my-json-server.typicode.com/ym85jo/nuxt-learn-api' 
-      : 'http://localhost:300',
+      : 'http://localhost:3000',
   }
 
 }

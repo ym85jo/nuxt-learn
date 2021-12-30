@@ -25,7 +25,7 @@
 <script>
 
 import axios from 'axios'
-import {fetchProductsByKeyword} from '@/api/index'
+import {fetchProductsByKeyword, fetchProducts} from '@/api/index'
 
 import SearchInput from '@/components/SearchInput'
 
@@ -42,7 +42,7 @@ export default {
   },
 
   async asyncData(){
-    const res = await axios.get('http://localhost:3000/products')
+    const res = await fetchProducts()
     const products = res.data.map(e => ({
       ...e,
       imageUrl : `${e.imageUrl}?random=${Math.random()}`
