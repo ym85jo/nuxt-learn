@@ -22,16 +22,18 @@ import {fetchProductById, createCartItem} from '@/api/index'
 
 export default {
   
-  head : {
-    title : 'Shopping Item Detail',
-    meta : [
-      {
-        hid : 'description',
-        name : 'description',
-        content : '상품 상세 페이지 입니다.',
-      },
-    ],
-    link : [],
+  head () {
+    return {
+      title : `Shopping Item Detail - ${this.product.name}`,
+      meta : [
+        {
+          hid : 'description',
+          name : 'description',
+          content : '상품 상세 페이지 입니다.',
+        },
+      ],
+      link : [],
+    }
   },
 
   async asyncData({params}){
