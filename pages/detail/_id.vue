@@ -35,9 +35,7 @@ export default {
     async addToCart(){
       const res = await createCartItem(this.product)
       this.$store.commit('addCartItem', this.product)
-      console.log(1)
       this.$router.push(`/cart`)
-      console.log(2)
     }
   }
 }

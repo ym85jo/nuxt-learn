@@ -41,6 +41,6 @@ export default {
   telemetry: false,
 
   server : {
-    port : 5000
+    port : process.evn.NODE_ENV === 'production' ? null : 5000,
   },
 }
